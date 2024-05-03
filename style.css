@@ -1,0 +1,205 @@
+:root{
+    --font-heading: "Tangerine", cursive;
+    --font-base: "Roboto", sans-serif;
+    --primary-color: rgb(228, 99, 100);
+    --gray: #eee;
+}
+body{
+    overflow-x: hidden;
+    background-color:#b7b7b7;
+    background-image: url(./images/floral-bg.png);
+    background-repeat: no-repeat;
+    background-position: 0% -75%;
+    backdrop-filter: brightness(0), grayscale(1);
+    font-family: var(--font-base);
+}
+header>:where(h1,h1+div){
+    font-size: 50px;
+    font-family: var(--font-heading);
+    text-align: center;
+}
+header h1+div{
+    margin-bottom: 10px;
+}
+header>h1{
+    font-size: 50px;
+    margin: 0px;
+}
+header>h1>span{
+    color: var(--primary-color  );
+}
+header nav{
+    text-align: center;
+    background: rgb(228, 99, 100);
+    padding: 10px 0px 50px;
+}
+.images-slider {
+    position: relative;
+    border: 4px gray solid;
+    margin: auto;
+    margin-top: -30px;
+    box-shadow: 6px 12px 20px 0px black;
+    /* height:max-content fit-content;  */
+}
+
+
+.images-slider>img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: all .3s;
+}
+.button-left{
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    font-size: 50px;
+    color: gray;
+    z-index: 1000;
+}
+.button-right{
+    position: absolute;
+    top: 50%    ;
+    right: 0px;
+    font-size: 50px;
+    color: gray;
+    z-index: 1000;
+}
+i{
+    transition: all .3s;
+}
+i:hover{
+    cursor: pointer;
+    color: white;
+}
+header h1{
+    animation: moveh1 1s infinite  alternate linear;
+}
+@keyframes moveh1{
+    from{
+        filter: drop-shadow(4px 2px 3px black);
+        transform: rotate(3deg);
+    }
+    to{
+        filter: drop-shadow(0px 0px 10px black);
+        transform: rotate(-3deg);
+    }
+}
+.label>span{
+    font-family: var(--font-heading);
+    font-size: 10px;
+}
+.label{
+    
+    text-align: center;
+    border-radius: 20px;
+    background: wheat;
+    position: absolute;
+    left: 30px;
+    font-size: 7px;
+    bottom:10px;
+    padding: 10px;
+}
+@media screen and (min-width: 1024px){
+    .label>span{
+        font-size: 25px;
+    }
+    .label{
+    font-size: 10px;
+    padding: 10px;
+    bottom: 10px;
+
+    }
+}
+.row-pseudo{
+    position: relative;
+    border:1px blackred solid;
+    box-shadow: inset 0px 0px 10px white;
+    margin-top: 30px;
+    text-align: center;
+}
+.row-pseudo>span{
+    margin-top: 10px;
+    font-size: 35px;
+    font-family:  var(--font-heading);
+}
+.sp-bl{
+    color: black;
+}
+.inner-content{
+
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px 10px 0px 10px;
+    margin: 20px;
+    border:1px rgb(224, 224, 224) solid ;
+    box-shadow: inset 0px 0px 0px 10px rgba(255, 255, 255, 0.341);
+}
+.inner-content>img{
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    border:1px rgb(224, 224, 224) solid ;
+}
+.inner-content>span{
+    padding: 20px;
+    font-size: 30px;
+    font-family: var(--font-heading);
+    display: block;
+    color: var(--primary-color);
+}
+.row-pseudo>.row{
+    justify-content: space-around;
+}
+.row-content {
+    display: flex; /* Размещаем элементы внутри родительского контейнера в строку */
+    justify-content: space-around; /* Равномерно распределяем пространство между элементами */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    position: relative;
+}
+
+.bad-div{
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bad-div2{
+
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+.photo{
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border:1px rgb(174, 174, 174) solid ;
+    display: flex;
+}
+.text{
+    margin: 20px 0px 0px 20px  ;
+    background-color: white;
+    padding: px;
+    border-radius: 10px;
+    float: left;
+    display: flex;
+    
+    font-family: var(--font-base);
+}
+.text2{
+    margin: 20px 0px 0px 20px  ;
+    background-color: white;
+    padding: px;
+    border-radius: 10px;
+    float: right;
+    display: flex;
+    
+    font-family: var(--font-base);
+}
+
